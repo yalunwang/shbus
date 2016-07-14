@@ -28,7 +28,7 @@ namespace DataAccess
         private DbInfo()
         {
             DatabaseProviderFactory factory = new DatabaseProviderFactory();
-            db = factory.Create("");
+            db = factory.Create("DBConnStr");
             ExecuteResult = new DbResult();
 
             Procdbcomm = db.DbProviderFactory.CreateCommand();
