@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TopJet.P2PService.DataAccess
+namespace DataAccess
 {
     public class BaseDbInfo
     {

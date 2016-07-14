@@ -49,9 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\BaseDbInfo.cs" />
-    <Compile Include="Common\DBConfig.cs" />
     <Compile Include="Common\DbResult.cs" />
-    <Compile Include="Common\P2PDbInfo.cs" />
+    <Compile Include="Common\DbInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

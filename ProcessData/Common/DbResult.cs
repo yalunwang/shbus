@@ -5,12 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TopJet.P2PService.DataAccess
+namespace DataAccess
 {
-    /// <summary>
-    /// xujf
-    ///  数据库执行结果
-    /// </summary>
+   
     public class DbResult
     {
         public DbResult()
