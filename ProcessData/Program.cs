@@ -14,14 +14,11 @@ namespace ProcessData
     {
         static void Main(string[] args)
         {
-            DbInfo hh= DbInfo.CreateInstance();
+            DbInfo db= DbInfo.CreateInstance();
+            string sql =string.Format("insert into LineInfo values(751512,22,{0},1)","'益江路张东路'");
+            DbCommand Procdbcomm = db.GetSqlStringCommand(sql);
 
-
-            Database db = hh.DB;
-            string procName = "insert into ";
-            DbCommand Procdbcomm = db.GetStoredProcCommand(procName);
-            db.AddInParameter(Procdbcomm, "@UID", DbType.Int64, "");
-            db.ExecuteNonQuery(procName);
+            db.ExecuteNonQuery(Procdbcomm);
         }
     }
 }
