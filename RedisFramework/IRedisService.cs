@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TopJet.FrameWork.Helper.Redis
+namespace YaLunWang.RedisFramework
 {
 
     public interface IRedisService

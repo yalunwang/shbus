@@ -1,4 +1,4 @@
-﻿using RedisFramework;
+﻿using YaLunWang.Common;
 using ServiceStack.Redis;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 
-namespace TopJet.FrameWork.Helper.Redis
+namespace YaLunWang.RedisFramework
 {
     /// <summary>
     /// Redis连接池管理

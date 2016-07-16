@@ -32,10 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\360极速浏览器下载\Json60r8\Bin\Net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
@@ -48,8 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HttpResponseMessage.cs" />
-    <Compile Include="IsoDateTimeConverterContent.cs" />
-    <Compile Include="JsonHelper.cs" />
     <Compile Include="MessageMQProcess.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,9 +55,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RedisFramework\RedisFramework.csproj">
+    <ProjectReference Include="..\RedisFramework\YaLunWang.RedisFramework.csproj">
       <Project>{d3f4ca93-ed29-4439-bb6a-804c982c5754}</Project>
-      <Name>RedisFramework</Name>
+      <Name>YaLunWang.RedisFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShBus.Model\ShBus.Model.csproj">
+      <Project>{dbd4c385-70ee-4f18-b782-7bc1b2949eab}</Project>
+      <Name>ShBus.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YalunWang.Common\YalunWang.Common.csproj">
+      <Project>{079043fc-ee2c-4234-ad90-54c4c5b3c143}</Project>
+      <Name>YalunWang.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TopJet.FrameWork.Helper.Redis
+namespace YaLunWang.RedisFramework
 {
     /// <summary>
     /// Redis的配置信息

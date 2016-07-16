@@ -48,14 +48,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarDataAccess.cs" />
     <Compile Include="Common\BaseDbInfo.cs" />
     <Compile Include="Common\DbResult.cs" />
     <Compile Include="Common\DbInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuenceProcess.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RedisFramework\YaLunWang.RedisFramework.csproj">
+      <Project>{d3f4ca93-ed29-4439-bb6a-804c982c5754}</Project>
+      <Name>YaLunWang.RedisFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShBus.Model\ShBus.Model.csproj">
+      <Project>{dbd4c385-70ee-4f18-b782-7bc1b2949eab}</Project>
+      <Name>ShBus.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YalunWang.Common\YalunWang.Common.csproj">
+      <Project>{079043fc-ee2c-4234-ad90-54c4c5b3c143}</Project>
+      <Name>YalunWang.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
