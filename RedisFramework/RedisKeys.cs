@@ -10,5 +10,6 @@ namespace YaLunWang.RedisFramework
     {
         public static string SYSTEMLOG = "SYSTEMLOG";
         public static string CARS = "CARS";
+        public static string STOPCARS = "STOPCARS";
     }
 }

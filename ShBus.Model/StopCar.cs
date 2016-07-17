@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ShBus.Model
 {
+    /// <summary>
+    /// 到站车辆
+    /// </summary>
     public class StopCar
     {
         /// <summary>

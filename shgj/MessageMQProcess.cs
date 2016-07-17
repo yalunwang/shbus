@@ -125,7 +125,18 @@ namespace shgj
                         Console.WriteLine("还有: {1}分钟{0}秒 ", Convert.ToInt32(item.time) % 60, Convert.ToInt32(item.time) / 60);
                         Utils.WriteLog(msg, DateTime.Now.ToString("yyyy-MM-dd") + "-shisi.txt");
                         string jsonCar=JsonHelper.Serialize(item);
-                        RedisServiceConfig.Default.PrependItemToList(RedisKeys.CARS, jsonCar);
+                  
+                        if (RedisServiceConfig.Default.IsExistRedis())
+                        {
+                            Console.WriteLine("\r\n");
+                            Console.WriteLine("/%%%%%%%%%%%%%%%%%redis出现异常%%%%%%%%%%%%%%");
+                            Console.WriteLine("\r\n");
+                        }
+                        else
+                        {
+                            RedisServiceConfig.Default.PrependItemToList(RedisKeys.CARS, jsonCar);
+                        }
+                       
                     }
 
 
@@ -157,6 +168,18 @@ namespace shgj
                                 msgStop = string.Format("车牌号：{0}，{1}到益江路张东路", stopCarItem.Terminal, stopCarItem.StopTime);
                                 Console.WriteLine("车牌号：{0}，{1}到益江路张东路", stopCarItem.Terminal, stopCarItem.StopTime);
                                 Utils.WriteLog(msgStop, DateTime.Now.ToString("yyyy-MM-dd") + "-tj.txt");
+
+                                if (RedisServiceConfig.Default.IsExistRedis())
+                                {
+                                    Console.WriteLine("\r\n");
+                                    Console.WriteLine("/%%%%%%%%%%%%%%%%%redis出现异常%%%%%%%%%%%%%%");
+                                    Console.WriteLine("\r\n");
+                                }
+                                else
+                                {
+                                    string jsonCar = JsonHelper.Serialize(stopCarItem);
+                                    RedisServiceConfig.Default.PrependItemToList(RedisKeys.STOPCARS, jsonCar);
+                                }
                                 if (stopCar.Where(o => o.StopTime < DateTime.Now.AddHours(-2)).Count() != 0)
                                 {
                                     foreach (var item in stopCar.Where(o => o.StopTime < DateTime.Now.AddHours(-2)))
@@ -181,6 +204,17 @@ namespace shgj
                             msgStop = string.Format("车牌号：{0}，{1}到益江路张东路", stopCarItem.Terminal, stopCarItem.StopTime);
                             Console.WriteLine("车牌号：{0}，{1}到益江路张东路", stopCarItem.Terminal, stopCarItem.StopTime);
                             Utils.WriteLog(msgStop, DateTime.Now.ToString("yyyy-MM-dd") + "-tj.txt");
+                            if (RedisServiceConfig.Default.IsExistRedis())
+                            {
+                                Console.WriteLine("\r\n");
+                                Console.WriteLine("/%%%%%%%%%%%%%%%%%redis出现异常%%%%%%%%%%%%%%");
+                                Console.WriteLine("\r\n");
+                            }
+                            else
+                            {
+                                string jsonCar = JsonHelper.Serialize(stopCarItem);
+                                RedisServiceConfig.Default.PrependItemToList(RedisKeys.STOPCARS, jsonCar);
+                            }
                         }
 
 

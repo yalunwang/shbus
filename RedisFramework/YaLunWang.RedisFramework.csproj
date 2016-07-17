@@ -52,6 +52,7 @@
     <Compile Include="RedisPoolManager.cs" />
     <Compile Include="RedisService.cs" />
     <Compile Include="RedisServiceConfig.cs" />
+    <Compile Include="ResultModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\YalunWang.Common\YalunWang.Common.csproj">

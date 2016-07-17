@@ -25,6 +25,17 @@ namespace YaLunWang.RedisFramework
             _RedisPool = new RedisPoolManager(configIp);
             _RedisPool.BuildRedisPoolClient();
         }
+        public bool IsExistRedis()
+        {
+            RedisResultModel result = new RedisResultModel();
+            var redis = _RedisPool.GetClient();
+           
+          
+            return redis.HadExceptions;
+
+
+
+        }
         public IRedisClient GetClient()
         {
             var redis = _RedisPool.GetClient();
@@ -46,7 +57,7 @@ namespace YaLunWang.RedisFramework
         {
             using (var redis = _RedisPool.GetClient())
             {
-                
+
                 return redis.Set(key, obj);
             }
         }
@@ -114,13 +125,13 @@ namespace YaLunWang.RedisFramework
             }
         }
         #region
-        public void SetHash(string key,string obj,string value)
-        { 
+        public void SetHash(string key, string obj, string value)
+        {
             using (var redis = _RedisPool.GetClient())
             {
-                 redis.SetEntryInHash(key, obj, value);
+                redis.SetEntryInHash(key, obj, value);
             }
-            
+
         }
 
         public Dictionary<string, string> GetAllEntriesFromHash(string id)
@@ -132,13 +143,13 @@ namespace YaLunWang.RedisFramework
         }
         public List<string> GetHashValues(string key)
         {
-                using (var redis = _RedisPool.GetClient())
-                {
-                    return  redis.GetHashValues(key);
-                }
+            using (var redis = _RedisPool.GetClient())
+            {
+                return redis.GetHashValues(key);
+            }
         }
-         
-        
+
+
         #endregion
     }
 }
