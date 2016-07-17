@@ -12,7 +12,7 @@ namespace YaLunWang.RedisFramework
     {
         IRedisClient GetClient();
         void Dispose(IRedisClient redis);
-        bool IsExistRedis();
+ 
         T Get<T>(string key);
         bool Set(string key, object obj);
         bool Set(string key, object obj, TimeSpan expiresIn);

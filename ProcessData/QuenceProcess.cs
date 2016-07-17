@@ -59,8 +59,11 @@ namespace ProcessData
                 {
                     try
                     {
+                       
                         Car car = JsonHelper.Deserialize<Car>(jsonCar);
+                        Console.WriteLine("已取出实时车辆"+car.terminal);
                         carDataAccess.ImportCarData(car);
+                        Console.WriteLine("已插入实时车辆");
                     }
                     catch (Exception ex)
                     {
@@ -75,8 +78,11 @@ namespace ProcessData
                 {
                     try
                     {
+                       
                         StopCar stopCar = JsonHelper.Deserialize<StopCar>(jsonStopCar);
+                        Console.WriteLine("已取出到站车辆" + stopCar.Terminal);
                         carDataAccess.ImportStopCar(stopCar);
+                        Console.WriteLine("已插入到站车辆");
                     }
                     catch (Exception ex)
                     {

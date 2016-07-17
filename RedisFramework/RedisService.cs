@@ -25,17 +25,7 @@ namespace YaLunWang.RedisFramework
             _RedisPool = new RedisPoolManager(configIp);
             _RedisPool.BuildRedisPoolClient();
         }
-        public bool IsExistRedis()
-        {
- 
-            var redis = _RedisPool.GetClient();
-           
-          
-            return redis.HadExceptions;
-
-
-
-        }
+       
         public IRedisClient GetClient()
         {
             var redis = _RedisPool.GetClient();

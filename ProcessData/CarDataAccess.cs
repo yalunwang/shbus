@@ -39,7 +39,7 @@ namespace ProcessData
         public void ImportStopCar(StopCar stopCar)
         {
             DbInfo db = DbInfo.CreateInstance();
-            string sql = string.Format("insert into StopCar (terminal,stopTime,lineInfoId) values('0}','{1}',{2})", stopCar.Terminal, stopCar.StopTime, 2);
+            string sql = string.Format("insert into StopCar (terminal,stopTime,lineInfoId) values('{0}','{1}',{2})", stopCar.Terminal, stopCar.StopTime, 2);
             DbCommand Procdbcomm = db.GetSqlStringCommand(sql);
 
             db.ExecuteNonQuery(Procdbcomm);
