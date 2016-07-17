@@ -27,7 +27,7 @@ namespace YaLunWang.RedisFramework
         }
         public bool IsExistRedis()
         {
-            RedisResultModel result = new RedisResultModel();
+ 
             var redis = _RedisPool.GetClient();
            
           
