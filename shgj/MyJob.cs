@@ -11,9 +11,11 @@ namespace shgj
         public void Execute()
         {
             Config.StartTime = DateTime.Now;
+            Console.WriteLine("采集开始{0}",Config.StartTime);
             Process process = new Process();
 
             process.Start();
         }
     }
+    
 }

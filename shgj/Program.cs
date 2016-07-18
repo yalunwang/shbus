@@ -12,14 +12,9 @@ namespace shgj
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("系统于{0}开始采集",DateTime.Now.ToString());
+            Console.WriteLine("{0}调度系统初始化",DateTime.Now.ToString());
             JobManager.Initialize(new MyRegistry());
-            while (Console.ReadLine() != "exit")
-            {
-                ///空循环，保证只有输入Exit才退出
-            }
-            //process.Stop();
-            Console.WriteLine("系统于{0}结束采集", DateTime.Now.ToString());
+           
             Console.Read();
         }
        

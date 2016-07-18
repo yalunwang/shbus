@@ -47,8 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
-    <Compile Include="HttpResponseMessage.cs" />
-    <Compile Include="MessageMQProcess.cs" />
+    <Compile Include="Process.cs" />
     <Compile Include="MyJob.cs" />
     <Compile Include="MyRegistry.cs" />
     <Compile Include="Program.cs" />
