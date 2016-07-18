@@ -9,9 +9,6 @@ using System.Threading.Tasks;
 using System.Xml;
 using YaLunWang.Common.Json;
 using YaLunWang.RedisFramework;
-
-
-
 namespace shgj
 {
     public class Process
@@ -77,6 +74,12 @@ namespace shgj
                 //    Console.WriteLine(item);
                 //}
                 #endregion
+                if (Config.StartTime.AddMinutes(2) < DateTime.Now)
+                {
+                    Console.WriteLine("截止时间到了");
+                    Stop();
+                    break;
+                }
                 string html = GetRequest(url, _httpClient);
                 if (html == "Failed")
                 {
