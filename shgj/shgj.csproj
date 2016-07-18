@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config.cs" />
     <Compile Include="HttpResponseMessage.cs" />
     <Compile Include="MessageMQProcess.cs" />
     <Compile Include="Program.cs" />
