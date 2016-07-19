@@ -10,3 +10,6 @@
 
 ####redis模块
 redis模块：用的是其中的list，采集项目将实时数据和到站数据分别插redis队列，在再运行 ProcessDate项目出队插入数据库进行统计。目的是防止采集频率高时直接插入数据库会影响实时统计的效。
+
+##统计结果预览地址
+ [yalunwang.com/Bus/GetStopCar.aspx](http://yalunwang.com/Bus/GetStopCar.aspx "点我预览")
