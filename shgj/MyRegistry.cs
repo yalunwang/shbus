@@ -18,7 +18,7 @@ namespace shgj
             // Schedule<MyJob>().ToRunNow().ToRunEvery(1).Days().At(1, 30);
 
             //系统于每天的07：49开始采集
-            Schedule<MyJob>().ToRunEvery(1).Days().At(07, 49);
+            Schedule<MyJob>().ToRunEvery(1).Days().At(07, 45);
             
             //// Schedule an IJob to run once, delayed by a specific time interval
             //Schedule<MyJob>().ToRunOnceIn(5).Seconds();
