@@ -152,6 +152,13 @@ namespace shgj
                     //时间小于40秒，或者距离有一站而且时间小于80秒  认做车是到站了
                     if (Convert.ToInt32(car[0].time) <= 40 || (Convert.ToInt32(car[0].stopdis) == 1 && Convert.ToInt32(car[0].time) <= 80))
                     {
+                        if (stopCar.Where(o => o.StopTime < DateTime.Now.AddMinutes(-18)).Count() != 0)
+                        {
+                            foreach (var item in stopCar.Where(o => o.StopTime < DateTime.Now.AddMinutes(-18)))
+                            {
+                                stopCar.Remove(item);//删除18分钟以前的到站数据
+                            }
+                        }
                         if (stopCar.Count != 0)
                         {
                             //如果车牌号不在
@@ -185,13 +192,7 @@ namespace shgj
                                     Console.WriteLine("\r\n");
                                 }
 
-                                if (stopCar.Where(o => o.StopTime < DateTime.Now.AddHours(-2)).Count() != 0)
-                                {
-                                    foreach (var item in stopCar.Where(o => o.StopTime < DateTime.Now.AddHours(-2)))
-                                    {
-                                        stopCar.Remove(item);//删除2个小时以前的到站数据
-                                    }
-                                }
+                               
                             }
 
                         }
