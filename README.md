@@ -14,4 +14,4 @@ redis模块：用的是其中的list，采集项目将实时数据和到站数�
 定时job是采用的开源框架FluentScheduler，轻量级简单高效。地址是：[https://github.com/fluentscheduler/FluentScheduler](https://github.com/fluentscheduler/FluentScheduler "fluentscheduler")
 
 ##统计结果预览地址
- [http://yalunwang.com/Bus/GetStopCar.aspx](http://yalunwang.com/Bus/GetStopCar.aspx "点我预览")
+ [http://old.yalunwang.com/Bus/GetStopCar.aspx](http://old.yalunwang.com/Bus/GetStopCar.aspx "点我预览")
